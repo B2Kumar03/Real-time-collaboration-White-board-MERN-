@@ -1,46 +1,82 @@
-# Getting Started with Create React App
+# Real-Time Collaborative Whiteboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The Real-Time Collaborative Whiteboard is a web application that allows multiple users to collaborate on a shared canvas in real-time. Users can draw, erase, and add shapes to the canvas. The app supports role-based access, ensuring that only the creator of the room can draw on the board. Additionally, the app provides features like undo, redo, exporting the canvas, and inviting other users to join the room via email.
 
-## Available Scripts
+## Features
+- **Real-Time Drawing**: Collaborate with multiple users in real-time.
+- **Role-Based Access**: Only the creator of the room can draw on the canvas.
+- **Drawing Tools**: Pencil, Eraser, Shapes (Rectangle, Circle).
+- **Color Palette**: Choose from a variety of colors for drawing.
+- **Undo/Redo**: Easily undo or redo your actions on the canvas.
+- **Export**: Export the canvas as an image or a PDF.
+- **Invite**: Invite other users to join the room via email.
 
-In the project directory, you can run:
+## Screenshot
+![Screenshot](https://github.com/B2Kumar03/project2Image/blob/main/Screenshot%202024-08-01%20210007.png?raw=true)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/real-time-collaborative-whiteboard.git
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Navigate to the project directory:
+    ```sh
+    cd real-time-collaborative-whiteboard
+    ```
 
-### `npm test`
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Start the application:
+    ```sh
+    npm start
+    ```
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Open your browser and navigate to `http://localhost:3000`.
+2. Enter a room ID to create or join a room.
+3. If you are the creator of the room, you can draw on the canvas using the provided tools.
+4. Use the "Invite" button to send the room ID to other users via email.
+5. Only the creator of the room can draw on the canvas. Other users can view the changes in real-time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Canvas.tsx`
+- Manages the drawing functionality and user interactions on the canvas.
+- Provides tools like pencil, eraser, and shapes.
+- Implements undo, redo, and export functionality.
+- Contains the invite modal for sending room ID to other users via email.
 
-### `npm run eject`
+### `Headers.tsx`
+- Displays the header and navigation bar.
+- Contains the invite modal for sending room ID to other users via email.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `App.tsx`
+- Main entry point of the application.
+- Sets up the routing and renders the `Canvas` component based on the route.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependencies
+- `react`
+- `react-dom`
+- `react-router-dom`
+- `react-bootstrap`
+- `socket.io-client`
+- `jspdf`
+- `react-icons`
+- `bootstrap`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgements
+- Thanks to the developers of the libraries and tools used in this project.
+- Special thanks to the contributors who helped in the development of this application.
