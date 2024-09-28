@@ -33,7 +33,7 @@ The Real-Time Collaborative Whiteboard is a web application that allows multiple
     ```
 
 4. Start the application:
-    ```sh
+    ```s
     npm start
     ```
 
